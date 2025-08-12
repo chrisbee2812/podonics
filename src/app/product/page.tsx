@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { CheckCircle, Shield, Syringe, Thermometer, BatteryCharging, TestTube } from "lucide-react"
+import { CheckCircle, Shield, Syringe, Book, Users, HeartHandshake, Video } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
@@ -21,13 +21,31 @@ const features = [
   {
     icon: Syringe,
     title: "Ergonomic Design",
-    description: "Lightweight and contoured for a comfortable, secure grip, reducing user fatigue.",
+    description: "Lightweight and contoured for a comfortable, secure grip, reducing user fatigue during procedures.",
   },
   {
     icon: CheckCircle,
     title: "Dose Accuracy",
-    description: "Clear dose window and precise dial mechanism for accurate and easy dosage setting.",
+    description: "Clear dose window and a precise dial mechanism for accurate and easy dosage setting every time.",
   },
+]
+
+const benefits = [
+    {
+        icon: Users,
+        title: "Clinician Safety",
+        description: "Significantly reduces the risk of sharps injuries, protecting healthcare professionals."
+    },
+    {
+        icon: HeartHandshake,
+        title: "Patient Comfort",
+        description: "Engineered for smooth, controlled injections, minimizing patient discomfort."
+    },
+    {
+        icon: Book,
+        title: "Workflow Efficiency",
+        description: "Intuitive design and simple operation streamline clinical procedures, saving valuable time."
+    }
 ]
 
 const specifications = [
@@ -95,28 +113,82 @@ export default function ProductPage() {
             ))}
         </div>
       </section>
-
+      
       <section>
         <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">Technical Specifications</h2>
-            <p className="max-w-[600px] mx-auto mt-4 text-muted-foreground md:text-xl/relaxed">
-                Built to the highest industry standards for quality and reliability.
-            </p>
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">Clinical Benefits</h2>
+          <p className="max-w-[600px] mx-auto mt-4 text-muted-foreground md:text-xl/relaxed">
+            Prioritizing safety and efficiency in every aspect of its design.
+          </p>
         </div>
-        <Card className="max-w-3xl mx-auto">
-            <CardContent className="p-0">
-                <Table>
-                    <TableBody>
-                        {specifications.map((spec) => (
-                        <TableRow key={spec.name}>
-                            <TableCell className="font-medium">{spec.name}</TableCell>
-                            <TableCell>{spec.value}</TableCell>
-                        </TableRow>
-                        ))}
-                    </TableBody>
-                </Table>
-            </CardContent>
-        </Card>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {benefits.map((benefit) => (
+                <Card key={benefit.title} className="text-center flex flex-col items-center p-6 bg-muted/50">
+                    <CardHeader className="flex flex-col items-center gap-4">
+                        <benefit.icon className="w-8 h-8 text-accent" />
+                        <CardTitle className="font-headline">{benefit.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        {benefit.description}
+                    </CardContent>
+                </Card>
+            ))}
+        </div>
+      </section>
+
+      <section className="bg-card -mx-container -my-8 px-container py-12 md:py-24">
+         <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">See It In Action</h2>
+          <p className="max-w-[600px] mx-auto mt-4 text-muted-foreground md:text-xl/relaxed">
+            Watch our video to learn more about the Safe-T-Pen's innovative features.
+          </p>
+        </div>
+        <div className="max-w-4xl mx-auto">
+            <div className="aspect-video overflow-hidden rounded-lg shadow-lg">
+                <iframe 
+                    width="100%" 
+                    height="100%" 
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                    title="YouTube video player" 
+                    frameBorder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowFullScreen>
+                </iframe>
+            </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">Technical Specifications</h2>
+                <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed">
+                    Built to the highest industry standards for quality and reliability.
+                </p>
+                <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                    <Button asChild size="lg">
+                        <a href="/docs/safe-t-pen.pdf" target="_blank" rel="noopener noreferrer">
+                            <Book className="mr-2 h-5 w-5" />
+                            View Documentation
+                        </a>
+                    </Button>
+                </div>
+            </div>
+            <Card>
+                <CardContent className="p-0">
+                    <Table>
+                        <TableBody>
+                            {specifications.map((spec) => (
+                            <TableRow key={spec.name}>
+                                <TableCell className="font-medium">{spec.name}</TableCell>
+                                <TableCell>{spec.value}</TableCell>
+                            </TableRow>
+                            ))}
+                        </TableBody>
+                    </Table>
+                </CardContent>
+            </Card>
+        </div>
       </section>
     </div>
   )
