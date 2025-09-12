@@ -15,46 +15,34 @@ import {
 const features = [
   {
     icon: Shield,
-    title: "Patented Safety Mechanism",
-    description: "A retractable needle shield automatically locks after injection, preventing needlestick injuries.",
+    title: "Precise Application",
+    description: "Ultra fine tip provides accurate and controlled delivery of Liquid Phenol to the nail matrix eliminating over use.",
   },
   {
-    icon: Syringe,
-    title: "Ergonomic Design",
-    description: "Lightweight and contoured for a comfortable, secure grip, reducing user fatigue during procedures.",
+    icon: Users,
+    title: "Safe, Non Splash Application",
+    description: "Designed for safety, all Liquid Phenol is contained within a glass ampoule and sealed inside a plastic delivery case, reducing evaporation and eliminating splash.",
   },
   {
     icon: CheckCircle,
-    title: "Dose Accuracy",
-    description: "Clear dose window and a precise dial mechanism for accurate and easy dosage setting every time.",
+    title: "Accuracy of Delivery",
+    description: "SafeTPen Liquid Phenol has been coloured with a blue medical dye, improving the accuracy of delivery.",
+  },
+  {
+      icon: Syringe,
+      title: "0.4mls of Liquid Phenol 89% USP",
+      description: "Each SafeTPen device contains 0.4ml of Liquid Phenol 89% USP."
+  },
+  {
+      icon: HeartHandshake,
+      title: "Snap, Snap, Squeeze",
+      description: "SafeTPenTM devices feature a lightweight and ergonomic design, activated through a simple Snap, Snap, Squeeze action."
   },
 ]
 
-const benefits = [
-    {
-        icon: Users,
-        title: "Clinician Safety",
-        description: "Significantly reduces the risk of sharps injuries, protecting healthcare professionals."
-    },
-    {
-        icon: HeartHandshake,
-        title: "Patient Comfort",
-        description: "Engineered for smooth, controlled injections, minimizing patient discomfort."
-    },
-    {
-        icon: Book,
-        title: "Workflow Efficiency",
-        description: "Intuitive design and simple operation streamline clinical procedures, saving valuable time."
-    }
-]
-
 const specifications = [
-    { name: "Product Name", value: "Podonics Safe-T-Pen" },
-    { name: "Model Number", value: "STP-2024" },
-    { name: "Material", value: "Medical-grade polymer and stainless steel" },
-    { name: "Dimensions", value: "150mm x 15mm" },
-    { name: "Weight", value: "25g" },
-    { name: "Certifications", value: "CE, FDA, ISO 13485" },
+    { name: "Product Name", value: "Podonics SafeTPen" },
+    { name: "Model Number", value: "PDP89B" },
 ]
 
 
@@ -65,23 +53,23 @@ export default function ProductPage() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-4">
             <h1 className="text-4xl lg:text-5xl font-bold font-headline">
-              The Podonics Safe-T-Pen
+              The Podonics SafeTPen
             </h1>
             <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Experience the next generation of clinical safety and precision. The Safe-T-Pen is meticulously engineered to protect healthcare professionals while delivering unparalleled performance and reliability.
+              Experience the next generation of clinical safety and precision. The SafeTPen is meticulously engineered to protect healthcare professionals while delivering unparalleled performance and reliability.
             </p>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
               <Button asChild size="lg">
                 <Link href="/contact">Request a Quote</Link>
               </Button>
-               <Button asChild variant="outline" size="lg">
+               <Button asChild size="lg">
                 <Link href="/locations">Find a Distributor</Link>
               </Button>
             </div>
           </div>
           <div>
             <Image
-              src="https://placehold.co/600x400.png"
+              src="/Safetpen-600x400.jpg"
               data-ai-hint="medical device pen"
               alt="Safe-T-Pen in use"
               width={600}
@@ -99,11 +87,11 @@ export default function ProductPage() {
             Designed with the user in mind, for safety, comfort, and efficiency.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-8">
             {features.map((feature) => (
                 <Card key={feature.title} className="text-center flex flex-col items-center p-6">
                     <CardHeader className="flex flex-col items-center gap-4">
-                        <feature.icon className="w-8 h-8 text-accent" />
+                        <feature.icon className="w-8 h-8 text-primary" />
                         <CardTitle className="font-headline">{feature.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
@@ -114,33 +102,11 @@ export default function ProductPage() {
         </div>
       </section>
       
-      <section>
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">Clinical Benefits</h2>
-          <p className="max-w-[600px] mx-auto mt-4 text-muted-foreground md:text-xl/relaxed">
-            Prioritizing safety and efficiency in every aspect of its design.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {benefits.map((benefit) => (
-                <Card key={benefit.title} className="text-center flex flex-col items-center p-6 bg-muted/50">
-                    <CardHeader className="flex flex-col items-center gap-4">
-                        <benefit.icon className="w-8 h-8 text-accent" />
-                        <CardTitle className="font-headline">{benefit.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        {benefit.description}
-                    </CardContent>
-                </Card>
-            ))}
-        </div>
-      </section>
-
       <section className="bg-card -mx-container -my-8 px-container py-12 md:py-24">
          <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">See It In Action</h2>
           <p className="max-w-[600px] mx-auto mt-4 text-muted-foreground md:text-xl/relaxed">
-            Watch our video to learn more about the Safe-T-Pen's innovative features.
+            Watch our video to learn more about the SafeTPen's innovative features.
           </p>
         </div>
         <div className="max-w-4xl mx-auto">
@@ -148,7 +114,7 @@ export default function ProductPage() {
                 <iframe 
                     width="100%" 
                     height="100%" 
-                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                    src="https://www.youtube.com/embed/cEMvrlZ90-8?feature=oembed" 
                     title="YouTube video player" 
                     frameBorder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -161,15 +127,24 @@ export default function ProductPage() {
       <section>
         <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">Technical Specifications</h2>
-                <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed">
-                    Built to the highest industry standards for quality and reliability.
-                </p>
-                <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">Product Information:</h2>
+                <div className="flex flex-col gap-4 min-[400px]:flex-column">
                     <Button asChild size="lg">
-                        <a href="/docs/safe-t-pen.pdf" target="_blank" rel="noopener noreferrer">
+                        <a href="/docs/PODONICS-4PP-210mm.pdf" target="_blank" rel="noopener noreferrer">
                             <Book className="mr-2 h-5 w-5" />
-                            View Documentation
+                            SafeTPen Overview
+                        </a>
+                    </Button>
+                    <Button asChild size="lg">
+                        <a href="/docs/IFU-PDP89B.V3-Instructions-for-Use.pdf" target="_blank" rel="noopener noreferrer">
+                            <Book className="mr-2 h-5 w-5" />
+                            SafeTPen instructions for use
+                        </a>
+                    </Button>
+                    <Button asChild size="lg">
+                        <a href="/docs/SDS-PDP89B.V1-Podonics-Dispence-Phenol-Blue-89_-Safety-Data-Sheet.pdf" target="_blank" rel="noopener noreferrer">
+                            <Book className="mr-2 h-5 w-5" />
+                            SafeTPen Safety Data Sheet
                         </a>
                     </Button>
                 </div>

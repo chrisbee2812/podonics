@@ -25,7 +25,7 @@ export default function Home() {
               <Button asChild size="lg">
                 <Link href="/product">Discover the Features</Link>
               </Button>
-              <Button asChild variant="outline" size="lg">
+              <Button asChild size="lg">
                 <Link href="/contact">Request a Demo</Link>
               </Button>
             </div>
@@ -50,10 +50,10 @@ export default function Home() {
             SafeTPen has been designed by an extremely experienced team with an extensive record within the Single Application Phenol Medical Device Market.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 m-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mx-8">
             <Card className="text-center flex flex-col items-center p-6">
               <CardHeader className="flex flex-col items-center gap-4">
-                <Syringe className="w-8 h-8 text-accent" />
+                <Syringe className="w-8 h-8 text-primary" />
                 <CardTitle className="font-headline">Unique Stable Design</CardTitle>
               </CardHeader>
               <CardContent>
@@ -62,7 +62,7 @@ export default function Home() {
             </Card>
             <Card className="text-center flex flex-col items-center p-6">
               <CardHeader className="flex flex-col items-center gap-4">
-                <Shield className="w-8 h-8 text-accent" />
+                <Shield className="w-8 h-8 text-primary" />
                 <CardTitle className="font-headline">Enhanced Safety Features</CardTitle>
               </CardHeader>
               <CardContent>
@@ -71,7 +71,7 @@ export default function Home() {
             </Card>
             <Card className="text-center flex flex-col items-center p-6">
               <CardHeader className="flex flex-col items-center gap-4">
-                <CheckCircle className="w-8 h-8 text-accent" />
+                <CheckCircle className="w-8 h-8 text-primary" />
                 <CardTitle className="font-headline">Easy To Apply</CardTitle>
               </CardHeader>
               <CardContent>

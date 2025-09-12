@@ -8,8 +8,8 @@ import { Footer } from "@/components/Footer"
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: "Podonics Safe-T-Pen Hub",
-  description: "The official hub for the Podonics Safe-T-Pen",
+  title: "Podonics SafeTPen Hub",
+  description: "The official hub for the Podonics SafeTPen",
 }
 
 export default function RootLayout({
@@ -20,12 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=PT+Sans:wght@400;700&display=swap"
-          rel="stylesheet"
-        />
+        
       </head>
       <body
         className={cn(

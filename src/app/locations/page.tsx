@@ -37,53 +37,53 @@ const providers: ProviderCardProps[] = [
 
 export default function LocationsPage() {
   return (
-    <div className="py-12 md:py-16">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl lg:text-5xl font-bold font-headline">
-          Our Locations
-        </h1>
-        <p className="max-w-2xl mx-auto mt-4 text-lg text-muted-foreground">
-          Find an authorized dealer of the Podonics SafeTPen.
-        </p>
-      </div>
+      <div className="py-12 md:py-16">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl lg:text-5xl font-bold font-headline">
+            Our Locations
+          </h1>
+          <p className="max-w-2xl mx-auto mt-4 text-lg text-muted-foreground">
+            Find an authorized dealer of the Podonics SafeTPen.
+          </p>
+        </div>
 
-      <section className="mb-16">
-        <h2 className="text-3xl font-bold font-headline text-center mb-4">Worldwide Distributors</h2>
-        {providers.map((providers) => (
-        <>
-          <h3 className="text-2xl font-semibold font-headline text-center mb-2 mt-8">{providers.title}:</h3>
-          <Card className="max-w-3xl mx-auto shadow-lg">
-              <CardHeader className="text-center">
-                  <CardTitle className="text-2xl font-headline">{providers.name}</CardTitle>
-                  <CardDescription>Authorized Podonics UK Distributor</CardDescription>
-              </CardHeader>
-              <CardContent className="grid md:grid-cols-2 gap-6 text-base items-center">
-                  <div className="space-y-4">
-                      <div className="flex items-start space-x-3">
-                          <MapPin className="w-5 h-5 mt-1 text-accent flex-shrink-0" />
-                          <p className="text-muted-foreground">{providers.address}</p>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                          <Phone className="w-5 h-5 text-accent" />
-                          <p className="text-muted-foreground">{providers.phone}</p>
-                      </div>
-                  </div>
-                  <div className="flex justify-center">
-                      <Button asChild size="lg">
-                          <a href={providers.website} target="_blank" rel="noopener noreferrer">
-                              <Globe className="mr-2 h-5 w-5" />
-                              Visit Website
-                          </a>
-                      </Button>
-                  </div>
-              </CardContent>
-          </Card>
-        </>
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold font-headline text-center mb-4">Worldwide Distributors</h2>
+          {providers.map((providers) => (
+          <div>
+            <h3 key={providers.title} className="text-3xl font-semibold font-headline text-center mb-2 mt-8">{providers.title}:</h3>
+            <Card className="max-w-3xl mx-auto shadow-lg">
+                <CardHeader className="text-center">
+                    <CardTitle className="text-2xl font-headline">{providers.name}</CardTitle>
+                    <CardDescription>Authorized Podonics UK Distributor</CardDescription>
+                </CardHeader>
+                <CardContent className="grid md:grid-cols-2 gap-6 text-base items-center">
+                    <div className="space-y-4">
+                        <div className="flex items-start space-x-3">
+                            <MapPin className="w-5 h-5 mt-1 text-primary flex-shrink-0" />
+                            <p className="text-muted-foreground">{providers.address}</p>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                            <Phone className="w-5 h-5 text-primary" />
+                            <p className="text-muted-foreground">{providers.phone}</p>
+                        </div>
+                    </div>
+                    <div className="flex justify-center">
+                        <Button asChild size="lg">
+                            <a href={providers.website} target="_blank" rel="noopener noreferrer">
+                                <Globe className="mr-2 h-5 w-5" />
+                                Visit Website
+                            </a>
+                        </Button>
+                    </div>
+                </CardContent>
+            </Card>
+          </div>
+          
+          ))}
+        </section>
+
         
-        ))}
-      </section>
-
-      
-    </div>
+      </div>
   )
 }

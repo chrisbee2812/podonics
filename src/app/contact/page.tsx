@@ -20,10 +20,10 @@ export default function ContactPage() {
                 <h2 className="text-2xl font-bold font-headline">Contact Information</h2>
                 <div className="space-y-6">
                     <div className="flex items-start space-x-4">
-                        <Mail className="w-6 h-6 text-accent mt-1 flex-shrink-0" />
+                        <Mail className="w-12 h-12 text-primary mt-1 flex-shrink-0" />
                         <div>
-                            <h3 className="font-semibold">Email Us</h3>
-                            <p className="text-muted-foreground">
+                            <h3 className="font-semibold text-xl">Email Us</h3>
+                            <p className="text-muted-foreground text-lg">
                                 <a href="mailto:info@podonics.com" className="hover:text-primary transition-colors">info@podonics.com</a>
                             </p>
                         </div>

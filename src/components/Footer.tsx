@@ -11,9 +11,9 @@ export function Footer() {
             © {new Date().getFullYear()} Podonics. All Rights Reserved.
           </p>
         </div>
-        <div className="flex items-center gap-4 text-sm text-muted-foreground">
-            <Link href="/product">Product</Link>
-            <Link href="/contact">Contact</Link>
+        <div className="flex items-center gap-16 text-lg font-medium transition-colors text-muted-foreground">
+            <Link className="hover:text-primary hover:underline" href="/product">Product</Link>
+            <Link className="hover:text-primary hover:underline" href="/contact">Contact</Link>
         </div>
       </div>
     </footer>
