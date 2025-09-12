@@ -17,7 +17,7 @@ import Link from "next/link"
 
 const carouselItems = [
   {
-    image: "https://placehold.co/1600x800.png",
+    image: "/Ampoule-Filling-2-1600x800.jpg",
     hint: "medical device",
     title: "Uncompromising Safety",
     description: "The Safe-T-Pen features a unique locking mechanism to prevent accidental needlestick injuries.",
@@ -25,29 +25,29 @@ const carouselItems = [
     link: "/product",
   },
   {
-    image: "https://placehold.co/1600x800.png",
+    image: "/Filling-Line-1600x800.jpg",
     hint: "clinic environment",
     title: "Designed for Clinicians",
     description: "Ergonomically designed for comfort and precision during procedures.",
     cta: "View Features",
     link: "/product",
   },
-  {
-    image: "https://placehold.co/1600x800.png",
-    hint: "patient care",
-    title: "Patient-Centric Innovation",
-    description: "Enhancing patient safety and comfort is at the core of our design philosophy.",
-    cta: "Our Mission",
-    link: "/product",
-  },
-  {
-    image: "https://placehold.co/1600x800.png",
-    hint: "global network",
-    title: "Available Worldwide",
-    description: "Find a Podonics distributor near you, wherever you are in the world.",
-    cta: "Find a Dealer",
-    link: "/locations",
-  },
+  // {
+  //   image: "https://placehold.co/1600x800.png",
+  //   hint: "patient care",
+  //   title: "Patient-Centric Innovation",
+  //   description: "Enhancing patient safety and comfort is at the core of our design philosophy.",
+  //   cta: "Our Mission",
+  //   link: "/product",
+  // },
+  // {
+  //   image: "https://placehold.co/1600x800.png",
+  //   hint: "global network",
+  //   title: "Available Worldwide",
+  //   description: "Find a Podonics distributor near you, wherever you are in the world.",
+  //   cta: "Find a Dealer",
+  //   link: "/locations",
+  // },
 ]
 
 export function LandingCarousel() {

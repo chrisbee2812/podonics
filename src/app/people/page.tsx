@@ -2,41 +2,26 @@ import { PersonCard, type PersonCardProps } from "@/components/PersonCard"
 
 const teamMembers: PersonCardProps[] = [
   {
-    name: "Dr. Evelyn Reed",
-    role: "Founder & Chief Medical Officer",
-    bio: "With over 20 years of experience in podiatric surgery, Dr. Reed is the visionary behind the Safe-T-Pen, driven by a passion for clinician safety.",
+    name: "Mark Lawrie",
+    bio: ["Founder of Podonics Ltd", "MD – Head Of Sales & Marketing", "15 years experience in Podiatry", "Last 5 years in Medical Devices"],
     imageUrl: "https://placehold.co/120x120.png",
   },
   {
-    name: "James Carter",
-    role: "Chief Executive Officer",
-    bio: "James brings a wealth of experience in medical device commercialization, leading Podonics' mission to become a global standard in clinical safety.",
+    name: "Darren Sandy",
+    bio: ["Founder of Podonics Ltd", "Technical & Medical Director", "4th Generation of a Family of Podiatrists", "30+ Years as Owner/CEO of DLT Podiatry & Podopro UK", "15 years Experience as Manufacturer of Phenol EzSwabs"],
     imageUrl: "https://placehold.co/120x120.png",
   },
   {
-    name: "Aisha Khan",
-    role: "Head of Engineering",
-    bio: "Aisha led the design and development of the Safe-T-Pen. Her expertise in biomedical engineering was critical to its revolutionary safety mechanism.",
+    name: "Dan Chin",
+    bio: ["QA & RA Director", "20 Years in Medical Device Manufacture", "Regulatory & Compliance Consultant", "ISO 13485 Specialist"],
     imageUrl: "https://placehold.co/120x120.png",
   },
   {
-    name: "Ben Rodriguez",
-    role: "Lead Product Designer",
-    bio: "Ben's focus on user-centric design ensured that the Safe-T-Pen is not only safe but also ergonomic and intuitive for healthcare professionals.",
+    name: "Alberto Sogaro",
+    bio: ["Original patent designer for EZ Swab", "Creator of the SafeTPen", "Award winning innovator", "Over 100 patents", "Specialist in unidose medical devices"],
     imageUrl: "https://placehold.co/120x120.png",
   },
-  {
-    name: "Olivia Chen",
-    role: "Director of Quality & Regulatory Affairs",
-    bio: "Olivia ensures that every Podonics product meets the highest standards of quality and compliance, navigating the complex global regulatory landscape.",
-    imageUrl: "https://placehold.co/120x120.png",
-  },
-    {
-    name: "Marcus Thorne",
-    role: "Head of Global Sales",
-    bio: "Marcus is responsible for building relationships with our distribution partners worldwide, bringing the Safe-T-Pen to clinicians everywhere.",
-    imageUrl: "https://placehold.co/120x120.png",
-  },
+  
 ]
 
 export default function PeoplePage() {
@@ -51,7 +36,7 @@ export default function PeoplePage() {
         </p>
       </div>
       
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
         {teamMembers.map((person) => (
           <PersonCard key={person.name} {...person} />
         ))}

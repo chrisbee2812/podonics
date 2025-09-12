@@ -20,30 +20,14 @@ export default function ContactPage() {
                 <h2 className="text-2xl font-bold font-headline">Contact Information</h2>
                 <div className="space-y-6">
                     <div className="flex items-start space-x-4">
-                        <MapPin className="w-6 h-6 text-accent mt-1 flex-shrink-0" />
-                        <div>
-                            <h3 className="font-semibold">Our Address</h3>
-                            <p className="text-muted-foreground">Podonics Ltd.<br/>Innovation Park, Suite 42<br/>Cambridge, CB4 0GF<br/>United Kingdom</p>
-                        </div>
-                    </div>
-                     <div className="flex items-start space-x-4">
                         <Mail className="w-6 h-6 text-accent mt-1 flex-shrink-0" />
                         <div>
                             <h3 className="font-semibold">Email Us</h3>
                             <p className="text-muted-foreground">
-                                <a href="mailto:contact@podonics.com" className="hover:text-primary transition-colors">contact@podonics.com</a>
+                                <a href="mailto:info@podonics.com" className="hover:text-primary transition-colors">info@podonics.com</a>
                             </p>
                         </div>
-                    </div>
-                     <div className="flex items-start space-x-4">
-                        <Phone className="w-6 h-6 text-accent mt-1 flex-shrink-0" />
-                        <div>
-                            <h3 className="font-semibold">Call Us</h3>
-                            <p className="text-muted-foreground">
-                                <a href="tel:+441223123456" className="hover:text-primary transition-colors">+44 (0) 1223 123 456</a>
-                            </p>
-                        </div>
-                    </div>
+                    </div>                    
                 </div>
             </div>
             <div className="p-8 md:p-12">

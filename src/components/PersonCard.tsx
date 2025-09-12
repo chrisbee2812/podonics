@@ -3,12 +3,11 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 
 export interface PersonCardProps {
   name: string
-  role: string
-  bio: string
+  bio: string[]
   imageUrl: string
 }
 
-export function PersonCard({ name, role, bio, imageUrl }: PersonCardProps) {
+export function PersonCard({ name, bio, imageUrl }: PersonCardProps) {
   return (
     <Card className="text-center flex flex-col items-center p-4 h-full">
       <CardHeader className="flex flex-col items-center gap-4">
@@ -22,11 +21,13 @@ export function PersonCard({ name, role, bio, imageUrl }: PersonCardProps) {
         />
         <div className="text-center">
           <CardTitle className="font-headline text-xl">{name}</CardTitle>
-          <CardDescription className="text-primary">{role}</CardDescription>
         </div>
       </CardHeader>
       <CardContent className="flex-grow">
-        <p className="text-muted-foreground text-sm">{bio}</p>
+        <ul className="text-muted-foreground text-m">{
+          bio.map((item, index) => (<li key={index} className="mb-1">{item}</li>)
+        )
+        }</ul>
       </CardContent>
     </Card>
   )
