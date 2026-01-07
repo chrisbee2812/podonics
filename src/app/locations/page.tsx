@@ -19,13 +19,13 @@ const providers: ProviderCardProps[] = [
     website: "https://www.gillpodiatry.com/",
     title: "North America Distributor",
   },
-  {
-    name: "Briggate Medical",
-    address: "23-25 Lakewood Blvd, Braeside VIC 3195, Australia",
-    phone: "+61 3 8586 7800",
-    website: "https://www.briggatemedical.com/",
-    title: "Australia Distributor",
-  },
+  // {
+  //   name: "Briggate Medical",
+  //   address: "23-25 Lakewood Blvd, Braeside VIC 3195, Australia",
+  //   phone: "+61 3 8586 7800",
+  //   website: "https://www.briggatemedical.com/",
+  //   title: "Australia Distributor",
+  // },
   {
     name: "Allcare Medical Supplies",
     address: "4 Loft Place, Kumeu, Auckland, 0810, New Zealand",
